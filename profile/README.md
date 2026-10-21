@@ -20,10 +20,8 @@ pays before it reads. The fare is the *naulon*, the old coin you paid to cross.
 
 ### Repositories
 
-| | |
-|---|---|
-| **[naulon](https://github.com/naulonapp/naulon)** | The gate and its console, the in-app toll, the WordPress plugin and the paying agent. MIT. |
-| **[naulon-plugins](https://github.com/naulonapp/naulon-plugins)** | The plugin for ChatGPT/Codex and Claude Code: pay for and cite tolled sources. |
+- **[naulon](https://github.com/naulonapp/naulon)**: the gate and its console, the in-app toll, the WordPress plugin and the paying agent. MIT.
+- **[naulon-plugins](https://github.com/naulonapp/naulon-plugins)**: the plugin for ChatGPT/Codex and Claude Code. Pay for and cite tolled sources.
 
 ### Start
 
