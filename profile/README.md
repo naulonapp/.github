@@ -1,32 +1,37 @@
 <div align="center">
 
-# 🜉 &nbsp;naulon
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/naulonapp/.github/main/profile/assets/naulon-lockup-dark.png">
+  <img src="https://raw.githubusercontent.com/naulonapp/.github/main/profile/assets/naulon-lockup-light.png" alt="naulon" height="64">
+</picture>
 
-**Humans read free. Machines pay.**
+### Humans read free. Machines pay.
+
+[Website](https://naulon.app) · [Docs](https://naulonapp.github.io/naulon/) · [Blog](https://naulon.app/blog) · [Changelog](https://naulon.app/changelog)
 
 </div>
 
----
+A toll you put in front of a site. AI agents and crawlers pay a fraction of a cent in USDC to
+read or cite a page, it settles straight to the author's own wallet, and people read free.
 
-A pay-per-read toll for the agentic web. Put it in front of a site and an AI agent
-pays a fraction of a cent in USDC to read or cite a page. It settles straight to the
-author. A human request passes through untouched.
+Language models read writing at scale and pay nothing for it. naulon changes that one exchange:
+a human request passes through untouched, a machine request gets `402 Payment Required` and
+pays before it reads. The fare is the *naulon*, the old coin you paid to cross.
 
-Models consume writing at scale and pay nothing for it. The cost lands on the author,
-the benefit on the crawler. naulon flips that one exchange, and the toll is what keeps
-the work open: machines subsidize the free human read. The fare is the *naulon*, the
-old coin you paid to cross.
+### Repositories
 
-Attribution is the payout rule. An article's credits graph, who wrote it and in what
-proportion, is how the money splits — recursively, down to every author. No invoices,
-no manual payouts.
+| | |
+|---|---|
+| **[naulon](https://github.com/naulonapp/naulon)** | The gate and its console, the in-app toll, the WordPress plugin and the paying agent. MIT. |
+| **[naulon-plugins](https://github.com/naulonapp/naulon-plugins)** | The plugin for ChatGPT/Codex and Claude Code: pay for and cite tolled sources. |
 
-**[naulon](https://github.com/naulonapp/naulon)** is the gate itself, MIT and open
-source. `npx naulon init` writes a working config; `make demo` runs the whole loop
-offline.
+### Start
 
-**[naulon.app](https://naulon.app)** runs it for you if you'd rather not host a gate:
-a dashboard, payouts, and an MCP endpoint agents buy through.
-[Docs](https://naulon.app/docs) · [Pricing](https://naulon.app/pricing) · [Directory](https://naulon.app/directory) · [Changelog](https://naulon.app/changelog)
+```bash
+curl -O https://raw.githubusercontent.com/naulonapp/naulon/main/docker-compose.yml
+npx -p @naulon/sdk naulon init   # writes .env and config/credits.json
+docker compose up -d             # gate on :8402, console on :8403
+```
 
-Built on Circle's nanopayment rail, Arc-first, over HTTP 402.
+Or skip hosting: [naulon.app](https://naulon.app) runs the gate for you, with the same protocol
+and the same custody-free settlement. Built on Circle's nanopayment rail, Arc-first, over HTTP 402.
